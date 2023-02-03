@@ -5,7 +5,7 @@ import ArrowIcon from "@/icons/ArrowIcon";
 type Props = {
   value: Date;
   onClickDay: (date: Date) => void;
-  shouldClose: () => void;
+  shouldClose: (arg: boolean) => void;
 };
 
 export default function Calendar({ value, onClickDay, shouldClose }: Props) {

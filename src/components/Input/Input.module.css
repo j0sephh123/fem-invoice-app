@@ -1,27 +1,26 @@
-.field {
-}
-
 .input {
   border: 1px solid #dfe3fa;
   border-radius: 4px;
-  color: #0C0E16;
+  color: #0c0e16;
   font-size: 12px;
   height: 48px;
   padding: 16px;
 }
+
+.input.active {
+  border: 1px solid var(--purple);
+}
+
 .input:focus-visible {
   border: 1px solid var(--purple);
   outline: none;
 }
-.label{
-  color: #7E88C3;
 
-}
 .inputWrapper {
   padding-top: 10px;
   display: flex;
   align-items: center;
 }
-.inputWrapper svg{
+.inputWrapper svg {
   transform: translateX(-32px);
 }
