@@ -45,3 +45,13 @@ a {
   border: none;
   background-color: transparent;
 }
+.react-calendar__month-view__weekdays{
+  display: none !important; /* Can't find in their docs how to hide */
+}
+
+.react-calendar__tile {
+  cursor: pointer;
+}
+.react-calendar__tile--active {
+  font-weight: 600;
+}
