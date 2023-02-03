@@ -5,10 +5,9 @@ import ArrowIcon from "@/icons/ArrowIcon";
 type Props = {
   value: Date;
   onClickDay: (date: Date) => void;
-  shouldClose: (arg: boolean) => void;
 };
 
-export default function Calendar({ value, onClickDay, shouldClose }: Props) {
+export default function Calendar({ value, onClickDay }: Props) {
   return (
     <ReactCalendar
       formatMonthYear={(_, date) =>
@@ -19,13 +18,7 @@ export default function Calendar({ value, onClickDay, shouldClose }: Props) {
       prev2Label={null}
       nextLabel={<ArrowIcon orientation="right" />}
       next2Label={null}
-      onClickDay={(date) => {
-        onClickDay(date);
-        shouldClose(true);
-      }}
-      onChange={() => {
-        console.log("on change");
-      }}
+      onClickDay={onClickDay}
       value={value}
       view="month"
       minDetail="month"

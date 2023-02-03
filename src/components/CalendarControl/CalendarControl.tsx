@@ -1,8 +1,10 @@
+import CalendarIcon from "@/icons/CalendarIcon";
+import { displayDate } from "@/utils/date";
 import { useState } from "react";
 import ClickAwayListener from "react-click-away-listener";
 import Calendar from "../Calendar/Calendar";
-import ConditionalWrapper from "../ConditionalWrapper";
-import Input from "../Input/Input";
+import ConditionalWrapper from "../ConditionalWrapper/ConditionalWrapper";
+import Field from "../Field/Field";
 import Label from "../Label/Label";
 import classes from "./CalendarControl.module.css";
 
@@ -24,21 +26,17 @@ export default function CalendarControl({ date, setDate }: Props) {
       )}
     >
       <div className={classes.CalendarControl}>
-        <Input
+        <Field
           isActive={isCalendarActive}
           label={
             <Label onClick={() => setIsCalendarActive(false)}>Issue Date</Label>
           }
-          value={date}
           onClickInside={() => setIsCalendarActive(!isCalendarActive)}
-        />
-        {isCalendarActive && (
-          <Calendar
-            shouldClose={() => setIsCalendarActive(false)}
-            onClickDay={setDate}
-            value={date}
-          />
-        )}
+          icon={<CalendarIcon />}
+        >
+          {displayDate(date)}
+        </Field>
+        {isCalendarActive && <Calendar onClickDay={setDate} value={date} />}
       </div>
     </ConditionalWrapper>
   );

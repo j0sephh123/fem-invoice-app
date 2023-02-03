@@ -1,5 +1,3 @@
-import { PropsWithChildren } from "react";
-
 export default function ConditionalWrapper({
   condition,
   wrapper,
