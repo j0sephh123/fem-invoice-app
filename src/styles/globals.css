@@ -20,3 +20,28 @@ a {
 .calendarContainer {
   width: 300px;
 }
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.react-calendar__navigation__label {
+  border: none;
+  background-color: transparent;
+  color: #0c0e16;
+}
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #0c0e16;
+  opacity: 0.08;
+  border: none;
+}
+.react-calendar__tile {
+  border: none;
+  background-color: transparent;
+}
