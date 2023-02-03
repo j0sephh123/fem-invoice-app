@@ -1,16 +1,16 @@
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import ClickAwayListener from "react-click-away-listener";
 import Calendar from "../Calendar/Calendar";
 import ConditionalWrapper from "../ConditionalWrapper";
 import Input from "../Input/Input";
 import Label from "../Label/Label";
+import classes from "./CalendarControl.module.css";
 
 type Props = {
   date: Date;
   setDate: (date: Date) => void;
 };
 
-// TODO should render clickawaylistener only when calendar is active.
 export default function CalendarControl({ date, setDate }: Props) {
   const [isCalendarActive, setIsCalendarActive] = useState(false);
 
@@ -23,7 +23,7 @@ export default function CalendarControl({ date, setDate }: Props) {
         </ClickAwayListener>
       )}
     >
-      <div className="calendarControl">
+      <div className={classes.CalendarControl}>
         <Input
           isActive={isCalendarActive}
           label={

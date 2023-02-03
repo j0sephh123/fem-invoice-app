@@ -1,18 +1,6 @@
-:root {
-  --calendar__boxShadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
-  --purple: #7c5dfa;
-  --dark: #0c0e16;
-  --white: #fff;
-}
-
-@font-face {
-  font-family: "Bold";
-  src: url("../assets/fonts/LeagueSpartan-Bold.ttf");
-}
-@font-face {
-  font-family: "Medium";
-  src: url("../assets/fonts/LeagueSpartan-Medium.ttf");
-}
+@import url("./variables.css");
+@import url("./fonts.css");
+@import url("./calendar.css");
 
 * {
   font-family: "Medium";
@@ -30,13 +18,4 @@ a {
   display: flex;
   justify-content: center;
   padding: 40px;
-}
-
-@import url("./calendar.css");
-
-.calendarControl {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 260px;
 }
