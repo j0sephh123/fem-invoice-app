@@ -1,4 +1,8 @@
 :root {
+  --calendar__boxShadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+  --purple: #7c5dfa;
+  --dark: #0c0e16;
+  --white: #fff;
 }
 
 * {
@@ -15,43 +19,14 @@ a {
 .app {
   display: flex;
   justify-content: center;
+  padding: 40px;
 }
 
-.calendarContainer {
-  width: 300px;
-}
-.react-calendar__navigation {
-  display: flex;
-  justify-content: space-between;
-}
-.react-calendar__navigation__label {
-  border: none;
-  background-color: transparent;
-  color: #0c0e16;
-}
-.react-calendar__navigation__prev-button,
-.react-calendar__navigation__next-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
+@import url("./calendar.css");
 
-.react-calendar__month-view__days__day--neighboringMonth {
-  color: #0c0e16;
-  opacity: 0.08;
-  border: none;
-}
-.react-calendar__tile {
-  border: none;
-  background-color: transparent;
-}
-.react-calendar__month-view__weekdays{
-  display: none !important; /* Can't find in their docs how to hide */
-}
-
-.react-calendar__tile {
-  cursor: pointer;
-}
-.react-calendar__tile--active {
-  font-weight: 600;
+.calendarControl {
+  display:flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 260px;
 }

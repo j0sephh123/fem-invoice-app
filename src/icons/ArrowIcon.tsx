@@ -1,4 +1,4 @@
-import classes from "./classes.module.css";
+import classes from "./ArrowIcon.module.css";
 
 type Props = {
   orientation: "left" | "right";
