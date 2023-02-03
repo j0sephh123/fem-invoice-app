@@ -23,7 +23,7 @@ export default function Field({
         <div className={clsx(classes.field, isActive && classes.active)}>
           {children}
         </div>
-        {icon}
+        <div className={classes.icon}>{icon}</div>
       </div>
     </div>
   );

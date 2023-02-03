@@ -1,7 +1,7 @@
 import classes from "./ArrowIcon.module.css";
 
 type Props = {
-  orientation: "left" | "right";
+  orientation: "left" | "right" | "bottom";
 };
 
 export default function ArrowIcon({ orientation }: Props) {

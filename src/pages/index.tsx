@@ -1,4 +1,5 @@
 import CalendarControl from "@/components/CalendarControl/CalendarControl";
+import Dropdown from "@/components/Dropdown/Dropdown";
 import { useState } from "react";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
   return (
     <div className="app">
       <CalendarControl setDate={setDate} date={date} />
+      <Dropdown />
     </div>
   );
 }

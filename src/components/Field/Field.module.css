@@ -14,10 +14,11 @@
 
 .fieldWrapper {
   padding-top: 10px;
-  display: flex;
-  align-items: center;
+  position: relative;
 }
 
-.fieldWrapper svg {
-  transform: translateX(-32px);
+.icon {
+  position: absolute;
+  top: 28px;
+  right: 20px;
 }

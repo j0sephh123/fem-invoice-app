@@ -1,7 +1,7 @@
 .react-calendar {
   width: 240px;
   background: var(--white);
-  box-shadow: var(--calendar__boxShadow);
+  box-shadow: var(--boxShadow);
   border-radius: 8px;
   padding: 24px;
 }
