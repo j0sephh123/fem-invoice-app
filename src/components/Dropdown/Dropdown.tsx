@@ -17,6 +17,11 @@ type Props = {
 export default function Dropdown({ items, activeItem, setActiveItem }: Props) {
   const [isActive, setIsActive] = useState(false);
 
+  const handleItemClick = (itemData: DropdownItem) => {
+    setActiveItem(itemData);
+    setIsActive(false);
+  };
+
   return (
     <ConditionalWrapper
       condition={isActive}
@@ -39,8 +44,13 @@ export default function Dropdown({ items, activeItem, setActiveItem }: Props) {
         </Field>
         {isActive && (
           <div className={classes.Items}>
-            {items.map(({ value, label }) => (
-              <DropdownItemCard key={value}>{label}</DropdownItemCard>
+            {items.map((item) => (
+              <DropdownItemCard
+                onClick={() => handleItemClick(item)}
+                key={item.value}
+              >
+                {item.label}
+              </DropdownItemCard>
             ))}
           </div>
         )}

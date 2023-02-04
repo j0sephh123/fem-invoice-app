@@ -1,4 +1,9 @@
 .DropdownItemCard {
+  cursor: pointer;
   padding: 16px 24px;
   border-bottom: 1px solid var(--light);
+}
+
+.DropdownItemCard:hover {
+  color: var(--purple);
 }
