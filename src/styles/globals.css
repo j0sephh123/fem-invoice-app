@@ -20,8 +20,9 @@ a {
   padding: 40px;
 }
 
-.page {
-  
+.main {
+  width: 60%;
+  margin: 0 auto;
 }
 
 .field {

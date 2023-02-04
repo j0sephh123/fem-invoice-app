@@ -1,0 +1,27 @@
+.Header {
+  padding: 64px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.left h1 {
+  font-family: "Bold";
+  padding-bottom: 8px;
+}
+.left span {
+  color: var(--grey);
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+.action {
+}

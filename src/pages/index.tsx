@@ -6,6 +6,7 @@ import TextField from "@/components/TextField/TextField";
 import Button from "@/components/Button/Button";
 import PlusIcon from "@/icons/PlusIcon/PlusIcon";
 import Sidebar from "@/components/Sidebar/Sidebar";
+import Header from "@/components/Header/Header";
 
 const dropdownItems = [
   { value: "1", label: "Net 1 days" },
@@ -22,6 +23,9 @@ export default function Home() {
   return (
     <div className="page">
       <Sidebar />
+      <main className="main">
+        <Header totalInvoices={7} />
+      </main>
       {/* <div>
         <div className="app">
           <CalendarControl setDate={setDate} date={date} />
