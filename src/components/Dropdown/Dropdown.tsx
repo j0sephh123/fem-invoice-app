@@ -1,4 +1,4 @@
-import ArrowIcon from "@/icons/ArrowIcon";
+import ArrowIcon from "@/icons/ArrowIcon/ArrowIcon";
 import { Dispatch, SetStateAction, useState } from "react";
 import ClickAwayListener from "react-click-away-listener";
 import ConditionalWrapper from "../ConditionalWrapper/ConditionalWrapper";

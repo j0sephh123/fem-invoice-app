@@ -1,6 +1,6 @@
 import ReactCalendar from "react-calendar";
 import { months } from "@/utils/date";
-import ArrowIcon from "@/icons/ArrowIcon";
+import ArrowIcon from "@/icons/ArrowIcon/ArrowIcon";
 
 type Props = {
   value: Date;

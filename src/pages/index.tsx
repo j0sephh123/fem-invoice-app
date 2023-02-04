@@ -3,6 +3,8 @@ import CalendarControl from "@/components/CalendarControl/CalendarControl";
 import Dropdown from "@/components/Dropdown/Dropdown";
 import { ActiveDropdownItem } from "@/components/Dropdown/types";
 import TextField from "@/components/TextField/TextField";
+import Button from "@/components/Button/Button";
+import PlusIcon from "@/icons/PlusIcon/PlusIcon";
 
 const dropdownItems = [
   { value: "1", label: "Net 1 days" },
@@ -29,6 +31,22 @@ export default function Home() {
       </div>
       <div style={{ width: "300px", marginLeft: "20px" }}>
         <TextField />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "12px",
+        }}
+      >
+        <Button onClick={() => {}} icon={<PlusIcon />}>
+          New Invoice
+        </Button>
+        <Button onClick={() => {}}>Mark as paid</Button>
+        <Button onClick={() => {}}>Edit</Button>
+        <Button onClick={() => {}}>Delete</Button>
+        <Button onClick={() => {}}>+ Add New Item</Button>
       </div>
     </>
   );
