@@ -1,0 +1,56 @@
+.Sidebar {
+  background-color: var(--dark-grey);
+  height: 100vh;
+  width: 100px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+.logo {
+  position: relative;
+  height: 100px;
+}
+.logo svg {
+  z-index: 1;
+  position: absolute;
+  left: 35px;
+  top: 38px;
+  transform: scale(1.2);
+}
+.top {
+  background-color: #7c5dfa;
+  border-top-right-radius: 20px;
+  height: 65px;
+}
+.bottom {
+  position: absolute;
+  background-color: #9277ff;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 50px;
+  top: 50px;
+}
+
+.top,
+.bottom {
+  width: 100px;
+}
+
+.footer {
+  width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
+
+.separator {
+  background-color:var(--cove);
+  height: 1px;
+  width: 100%;
+}

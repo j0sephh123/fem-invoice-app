@@ -20,6 +20,10 @@ a {
   padding: 40px;
 }
 
+.page {
+  
+}
+
 .field {
   border: 1px solid var(--light);
   border-radius: 4px;

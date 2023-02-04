@@ -5,6 +5,7 @@ import { ActiveDropdownItem } from "@/components/Dropdown/types";
 import TextField from "@/components/TextField/TextField";
 import Button from "@/components/Button/Button";
 import PlusIcon from "@/icons/PlusIcon/PlusIcon";
+import Sidebar from "@/components/Sidebar/Sidebar";
 
 const dropdownItems = [
   { value: "1", label: "Net 1 days" },
@@ -19,41 +20,44 @@ export default function Home() {
     useState<ActiveDropdownItem>(null);
 
   return (
-    <>
-      <div className="app">
-        <CalendarControl setDate={setDate} date={date} />
-        <Dropdown
-          items={dropdownItems}
-          activeItem={activeDropdownItem}
-          setActiveItem={setActiveDropdownItem}
-        />
-        <br />
-      </div>
-      <div style={{ width: "300px", marginLeft: "20px" }}>
-        <TextField />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "12px",
-        }}
-      >
-        <Button onClick={() => {}} icon={<PlusIcon />}>
-          New Invoice
-        </Button>
-        <Button onClick={() => {}}>Mark as paid</Button>
-        <Button variant="secondary" onClick={() => {}}>
-          Edit
-        </Button>
-        <Button variant="danger" onClick={() => {}}>
-          Delete
-        </Button>
-        <Button variant="dark" onClick={() => {}}>
-          Save as draft
-        </Button>
-      </div>
-    </>
+    <div className="page">
+      <Sidebar />
+      {/* <div>
+        <div className="app">
+          <CalendarControl setDate={setDate} date={date} />
+          <Dropdown
+            items={dropdownItems}
+            activeItem={activeDropdownItem}
+            setActiveItem={setActiveDropdownItem}
+          />
+          <br />
+        </div>
+        <div style={{ width: "300px", marginLeft: "20px" }}>
+          <TextField />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "12px",
+          }}
+        >
+          <Button onClick={() => {}} icon={<PlusIcon />}>
+            New Invoice
+          </Button>
+          <Button onClick={() => {}}>Mark as paid</Button>
+          <Button variant="secondary" onClick={() => {}}>
+            Edit
+          </Button>
+          <Button variant="danger" onClick={() => {}}>
+            Delete
+          </Button>
+          <Button variant="dark" onClick={() => {}}>
+            Save as draft
+          </Button>
+        </div>
+      </div> */}
+    </div>
   );
 }
