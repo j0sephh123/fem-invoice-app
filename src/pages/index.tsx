@@ -46,9 +46,10 @@ export default function Home() {
       <Sidebar />
       <main className="main">
         <Header totalInvoices={7} />
-        {invoices.map((invoice) => (
+        {/* {invoices.map((invoice) => (
           <InvoiceCard key={invoice.id} invoice={invoice} />
-        ))}
+        ))} */}
+        
       </main>
       {/* <div>
         <div className="app">
