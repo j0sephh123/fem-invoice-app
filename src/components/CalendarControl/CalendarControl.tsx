@@ -1,6 +1,6 @@
 import CalendarIcon from "@/icons/CalendarIcon";
 import { displayDate } from "@/utils/date";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import ClickAwayListener from "react-click-away-listener";
 import Calendar from "../Calendar/Calendar";
 import ConditionalWrapper from "../ConditionalWrapper/ConditionalWrapper";
@@ -10,7 +10,7 @@ import classes from "./CalendarControl.module.css";
 
 type Props = {
   date: Date;
-  setDate: (date: Date) => void;
+  setDate: Dispatch<SetStateAction<Date>>;
 };
 
 export default function CalendarControl({ date, setDate }: Props) {

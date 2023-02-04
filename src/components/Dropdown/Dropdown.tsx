@@ -1,21 +1,20 @@
 import ArrowIcon from "@/icons/ArrowIcon";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import ClickAwayListener from "react-click-away-listener";
 import ConditionalWrapper from "../ConditionalWrapper/ConditionalWrapper";
 import Field from "../Field/Field";
 import Label from "../Label/Label";
 import classes from "./Dropdown.module.css";
+import DropdownItemCard from "./DropdownItem/DropdownItemCard";
+import { DropdownItem, ActiveDropdownItem } from "./types";
 
-type Props = {};
+type Props = {
+  items: DropdownItem[];
+  activeItem: ActiveDropdownItem;
+  setActiveItem: Dispatch<SetStateAction<ActiveDropdownItem>>;
+};
 
-const items = [
-  { value: "1", label: "Net 1 days" },
-  { value: "7", label: "Net 7 days" },
-  { value: "14", label: "Net 14 days" },
-  { value: "30", label: "Net 30 days" },
-];
-
-export default function Dropdown({}: Props) {
+export default function Dropdown({ items, activeItem, setActiveItem }: Props) {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -36,14 +35,12 @@ export default function Dropdown({}: Props) {
           icon={<ArrowIcon orientation="bottom" />}
           onClickInside={() => setIsActive(!isActive)}
         >
-          Net 30 Days
+          {activeItem?.label}
         </Field>
         {isActive && (
           <div className={classes.Items}>
-            {items.map((item) => (
-              <div className={classes.Item} key={item.value}>
-                {item.label}
-              </div>
+            {items.map(({ value, label }) => (
+              <DropdownItemCard key={value}>{label}</DropdownItemCard>
             ))}
           </div>
         )}
