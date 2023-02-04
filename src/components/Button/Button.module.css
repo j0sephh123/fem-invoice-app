@@ -1,23 +1,48 @@
 .Button {
   border-radius: 24px;
+  padding: 16px 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.hasIcon {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 8px;
   padding-right: 16px;
-  border: none;
-  cursor: pointer;
-  background-color: var(--purple);
-  color: var(--white);
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
+.primary:hover {
+  background-color: var(--purple-lighter);
+}
 .primary {
+  background-color: var(--purple);
+  color: var(--white);
 }
 
 .secondary {
+  color: var(--cove);
+  background-color: var(--lighter);
+}
+.secondary:hover {
+  background-color: var(--light);
 }
 
 .danger {
+  background-color: var(--red);
+  color: var(--white);
+}
+.danger:hover {
+  background-color: var(--red-lighter);
+}
+
+.dark {
+  color: var(--grey);
+  background-color: var(--dark-grey);
+}
+.dark:hover{
+  background-color: var(--dark);
 }

@@ -44,9 +44,15 @@ export default function Home() {
           New Invoice
         </Button>
         <Button onClick={() => {}}>Mark as paid</Button>
-        <Button onClick={() => {}}>Edit</Button>
-        <Button onClick={() => {}}>Delete</Button>
-        <Button onClick={() => {}}>+ Add New Item</Button>
+        <Button variant="secondary" onClick={() => {}}>
+          Edit
+        </Button>
+        <Button variant="danger" onClick={() => {}}>
+          Delete
+        </Button>
+        <Button variant="dark" onClick={() => {}}>
+          Save as draft
+        </Button>
       </div>
     </>
   );
