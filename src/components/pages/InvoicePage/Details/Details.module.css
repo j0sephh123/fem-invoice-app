@@ -1,0 +1,42 @@
+.Details {
+  margin-top: 24px;
+  padding: 48px;
+  box-shadow: var(--boxShadow-card);
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.row1 {
+  display: flex;
+  justify-content: space-between;
+}
+.row1 .idAndDescription {
+}
+.row1 .idAndDescription .id {
+}
+.row1 .idAndDescription .description {
+}
+.row1 .senderAddress {
+}
+.row1 .senderAddress > div {
+}
+
+.row2 {
+  display: flex;
+  justify-content: space-between;
+}
+.row2 .createdAt {
+}
+.row2 .clientName {
+}
+.row2 .clientEmail {
+}
+
+.row3 {
+  display: flex;
+  justify-content: space-between;
+}
+.row3 .paymentDue {
+}
+.row3 .clientAddress {
+}

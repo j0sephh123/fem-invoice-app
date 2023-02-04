@@ -7,7 +7,7 @@ export default function Controls() {
     <div className={classes.Controls}>
       <div className={classes.left}>
         Status
-        <Tag type="Pending" />
+        <Tag status="pending" />
       </div>
       <div className={classes.right}>
         <Button onClick={() => undefined} variant="secondary">

@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function InvoiceCard({
-  invoice: { due, id, person, sum, type },
+  invoice: { paymentDue, id, clientName, total, status },
 }: Props) {
   return (
     <Link href={`invoices/${id}`}>
@@ -19,11 +19,11 @@ export default function InvoiceCard({
           <span>#</span>
           {id}
         </div>
-        <div className={clsx(classes.item, classes.due)}>{due}</div>
-        <div className={clsx(classes.item, classes.person)}>{person}</div>
-        <div className={clsx(classes.item, classes.sum)}>{sum}</div>
+        <div className={clsx(classes.item, classes.paymentDue)}>{paymentDue}</div>
+        <div className={clsx(classes.item, classes.clientName)}>{clientName}</div>
+        <div className={clsx(classes.item, classes.total)}>{total}</div>
         <div className={clsx(classes.item, classes.tag)}>
-          <Tag type={type} />
+          <Tag status={status} />
           <ArrowIcon orientation="right" />
         </div>
       </div>

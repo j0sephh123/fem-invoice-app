@@ -19,13 +19,13 @@
   font: inherit;
   color: var(--cove);
 }
-.due {
+.paymentDue {
   color: var(--cove);
 }
-.person {
+.clientName {
   color: var(--cove);
 }
-.sum {
+.total {
   font-family: "Bold";  font-size: 16px;
 }
 .tag {

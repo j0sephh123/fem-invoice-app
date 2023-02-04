@@ -3,14 +3,14 @@ import clsx from "clsx";
 import classes from "./Tag.module.css";
 
 type Props = {
-  type: InvoiceStatus;
+  status: InvoiceStatus;
 };
 
-export default function Tag({ type }: Props) {
+export default function Tag({ status }: Props) {
   return (
-    <div className={clsx(classes.Tag, classes[type])}>
-      <span className={clsx(classes.dot, classes[type])} />
-      {type}
+    <div className={clsx(classes.Tag, classes[status])}>
+      <span className={clsx(classes.dot, classes[status])} />
+      {status}
     </div>
   );
 }

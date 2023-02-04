@@ -54,7 +54,10 @@
     "items": [
       {
         "name": "Banner Design",
-        "quantity": 1,
+        "quantity": 1,    "id": "RT2080",
+        "createdAt": "2021-10-11",
+        "paymentDue": "2021-10-12",
+        "description": "Logo Concept",
         "price": 156.00,
         "total": 156.00
       },
