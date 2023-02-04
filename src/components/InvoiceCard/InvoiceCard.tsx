@@ -13,13 +13,16 @@ export default function InvoiceCard({
 }: Props) {
   return (
     <div className={classes.InvoiceCard}>
-      <div className={clsx(classes.item, classes.id)}>{id}</div>
+      <div className={clsx(classes.item, classes.id)}>
+        <span>#</span>
+        {id}
+      </div>
       <div className={clsx(classes.item, classes.due)}>{due}</div>
       <div className={clsx(classes.item, classes.person)}>{person}</div>
       <div className={clsx(classes.item, classes.sum)}>{sum}</div>
       <div className={clsx(classes.item, classes.tag)}>
         <Tag type={type} />
-        <ArrowIcon orientation='right' />
+        <ArrowIcon orientation="right" />
       </div>
     </div>
   );

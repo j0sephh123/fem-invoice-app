@@ -1,10 +1,5 @@
 import { useState } from "react";
-import CalendarControl from "@/components/CalendarControl/CalendarControl";
-import Dropdown from "@/components/Dropdown/Dropdown";
 import { ActiveDropdownItem } from "@/components/Dropdown/types";
-import TextField from "@/components/TextField/TextField";
-import Button from "@/components/Button/Button";
-import PlusIcon from "@/icons/PlusIcon/PlusIcon";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Header from "@/components/Header/Header";
 import InvoiceCard from "@/components/InvoiceCard/InvoiceCard";
@@ -19,21 +14,21 @@ const dropdownItems = [
 
 const invoices: Invoice[] = [
   {
-    id: "#RT3080",
+    id: "RT3080",
     due: "Due 19 Aug 2021",
     person: "Jensen Huang",
     sum: "£ 1,800.90",
     type: "Paid",
   },
   {
-    id: "#TY9141",
+    id: "TY9141",
     due: "Due 19 Aug 2021",
     person: "John Morrison",
     sum: "£ 14,002.33",
     type: "Pending",
   },
   {
-    id: "#RT2080",
+    id: "RT2080",
     due: "Due  14 Oct 2021",
     person: "Anita Wainwright",
     sum: "£ 102.04",

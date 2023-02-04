@@ -10,14 +10,23 @@
   align-items: center;
 }
 .item {
+  font-size: 12px;
 }
 .id {
+  font-family: "Bold";
+}
+.id span {
+  font: inherit;
+  color: var(--cove);
 }
 .due {
+  color: var(--cove);
 }
 .person {
+  color: var(--cove);
 }
 .sum {
+  font-family: "Bold";  font-size: 16px;
 }
 .tag {
   display: flex;
