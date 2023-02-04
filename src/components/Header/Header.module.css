@@ -4,7 +4,6 @@
   justify-content: space-between;
 }
 
-
 .left h1 {
   font-family: "Bold";
   padding-bottom: 8px;
@@ -22,6 +21,4 @@
   align-items: center;
   gap: 16px;
   cursor: pointer;
-}
-.action {
 }

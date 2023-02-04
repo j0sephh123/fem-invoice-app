@@ -9,8 +9,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <div className="page">
         <Sidebar />
         <main className="main">
-          <Header totalInvoices={7} />
-
           <Component {...pageProps} />
         </main>
       </div>
