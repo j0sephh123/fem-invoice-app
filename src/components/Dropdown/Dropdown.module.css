@@ -3,7 +3,7 @@
 
 .Items {
   margin-top: 24px;
-  box-shadow: var(--boxShadow);
+  box-shadow: var(--boxShadow-field);
   border-radius: 8px;
 }
 

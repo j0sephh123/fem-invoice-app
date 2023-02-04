@@ -1,0 +1,42 @@
+.Tag {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 6px;
+  position: relative;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  left: 14px;
+  top: 15px;
+}
+.dot.Paid {
+  background-color: var(--green);
+}
+.dot.Pending {
+  background-color: var(--orange);
+}
+.dot.Draft {
+  background-color: var(--dark-grey);
+}
+
+.Paid {
+  background-color: rgba(51, 214, 159, 0.1);
+  color: var(--green);
+}
+.Pending {
+  background-color: rgba(255, 143, 0, 0.1);
+  color: var(--orange);
+}
+.Draft {
+  background-color: rgba(55, 59, 83, 0.1);
+  color: var(--dark-grey);
+}

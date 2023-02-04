@@ -1,0 +1,26 @@
+.InvoiceCard {
+  display: flex;
+  gap: 40px;
+  background: var(--white);
+  box-shadow: var(--boxShadow-card);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 24px 24px 24px 32px;
+  justify-content: space-between;
+  align-items: center;
+}
+.item {
+}
+.id {
+}
+.due {
+}
+.person {
+}
+.sum {
+}
+.tag {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}

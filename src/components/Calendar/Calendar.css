@@ -3,7 +3,7 @@
   top: 96px;
   width: 240px;
   background: var(--white);
-  box-shadow: var(--boxShadow);
+  box-shadow: var(--boxShadow-field);
   border-radius: 8px;
   padding: 24px;
 }

@@ -1,14 +1,18 @@
 :root {
-  --boxShadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+  --boxShadow-field: 0px 10px 20px rgba(72, 84, 159, 0.25);
+  --boxShadow-card: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   --purple: #7c5dfa;
   --purple-lighter: #9277ff;
   --grey: #888eb0;
   --dark-grey: #373b53;
   --dark: #0c0e16;
+  --grey-background: #F8F8FB;
   --white: #fff;
   --light: #dfe3fa;
   --lighter: #f9fafe;
   --cove: #7e88c3;
   --red: #ec5757;
   --red-lighter: #ff9797;
+  --green: #33d69f;
+  --orange: #ff8f00;
 }
