@@ -1,4 +1,6 @@
 .react-calendar {
+  position:absolute;
+  top: 96px;
   width: 240px;
   background: var(--white);
   box-shadow: var(--boxShadow);

@@ -2,6 +2,7 @@ import { useState } from "react";
 import CalendarControl from "@/components/CalendarControl/CalendarControl";
 import Dropdown from "@/components/Dropdown/Dropdown";
 import { ActiveDropdownItem } from "@/components/Dropdown/types";
+import TextField from "@/components/TextField/TextField";
 
 const dropdownItems = [
   { value: "1", label: "Net 1 days" },
@@ -16,13 +17,19 @@ export default function Home() {
     useState<ActiveDropdownItem>(null);
 
   return (
-    <div className="app">
-      <CalendarControl setDate={setDate} date={date} />
-      <Dropdown
-        items={dropdownItems}
-        activeItem={activeDropdownItem}
-        setActiveItem={setActiveDropdownItem}
-      />
-    </div>
+    <>
+      <div className="app">
+        <CalendarControl setDate={setDate} date={date} />
+        <Dropdown
+          items={dropdownItems}
+          activeItem={activeDropdownItem}
+          setActiveItem={setActiveDropdownItem}
+        />
+        <br />
+      </div>
+      <div style={{ width: "300px", marginLeft: "20px" }}>
+        <TextField />
+      </div>
+    </>
   );
 }

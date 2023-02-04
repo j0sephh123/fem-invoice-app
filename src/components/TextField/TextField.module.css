@@ -1,0 +1,4 @@
+.TextField:focus-visible { 
+  border: 1px solid var(--purple);
+  outline: none;
+}

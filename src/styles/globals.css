@@ -19,3 +19,13 @@ a {
   justify-content: center;
   padding: 40px;
 }
+
+.field {
+  border: 1px solid var(--light);
+  border-radius: 4px;
+  color: var(--dark);
+  font-size: 15px;
+  height: 48px;
+  padding: 16px;
+  min-width: 240px;
+}

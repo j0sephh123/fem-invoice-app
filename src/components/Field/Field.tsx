@@ -20,7 +20,7 @@ export default function Field({
     <div>
       {label}
       <div onClick={onClickInside} className={classes.fieldWrapper}>
-        <div className={clsx(classes.field, isActive && classes.active)}>
+        <div className={clsx("field", isActive && classes.active)}>
           {children}
         </div>
         <div className={classes.icon}>{icon}</div>
