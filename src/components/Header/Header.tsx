@@ -5,6 +5,7 @@ import classes from "./Header.module.css";
 import TextNode from "@/components/TextNode/TextNode";
 import { useState } from "react";
 import FilterItems from "./FilterItems/FilterItems";
+import Checkbox from "../Checkbox/Checkbox";
 
 type Props = {
   totalInvoices: number;
@@ -29,7 +30,11 @@ export default function Header({ totalInvoices }: Props) {
           <ArrowIcon orientation="bottom" />
           {isFiltering && (
             <FilterItems onClose={() => setIsFiltering(false)}>
-              <div className={classes.filterItems}>filterItems</div>
+              <div className={classes.filterItems}>
+                <Checkbox>Draft</Checkbox>
+                <Checkbox isChecked>Pending</Checkbox>
+                <Checkbox>Paid</Checkbox>
+              </div>
             </FilterItems>
           )}
         </div>
