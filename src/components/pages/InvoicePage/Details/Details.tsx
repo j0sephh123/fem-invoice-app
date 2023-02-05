@@ -21,6 +21,7 @@ export default function Details({
       postCode: clientPostCode,
       street: clientStreet,
     },
+    items,
   },
 }: Props) {
   return (
@@ -67,6 +68,28 @@ export default function Details({
           <div className={classes.label}>{clientCountry}</div>
         </div>
         <div />
+      </div>
+
+      <div className={classes.summary}>
+        <div className={classes.summaryHead}>
+          <div className={classes.label}>Item Name</div>
+          <div className={classes.label}>QTY.</div>
+          <div className={classes.label}>Price</div>
+          <div className={classes.label}>Total</div>
+        </div>
+
+        {items.map((item, i) => (
+          <div key={i} className={classes.summaryRow}>
+            <div className={classes.itemName}>{item.name}</div>
+            <div className={classes.label}>{item.quantity}</div>
+            <div className={classes.label}>£{item.price}</div>
+            <div className={classes.total}>£{item.total}</div>
+          </div>
+        ))}
+      </div>
+      <div className={classes.summaryAmountDue}>
+        <div className={classes.amountDueLabel}>Amount Due</div>
+        <div className={classes.amountDueSum}>£556.00</div>
       </div>
     </div>
   );

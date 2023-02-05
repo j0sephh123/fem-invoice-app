@@ -51,9 +51,43 @@
 }
 .row3 .paymentDue .label {
   padding-bottom: 12px;
-}.row3 .clientAddress  {
-  padding-right: 125px;
+}
+.row3 .clientAddress {
+  padding-right: 30px;
 }
 .row3 .clientAddress .label {
   padding-top: 4px;
+}
+
+.summary {
+  background-color: var(--lighter);
+  padding-top: 32px;
+  padding-right: 32px;
+  padding-left: 32px;
+  padding-bottom: 40px;
+}
+.summaryHead {
+  display: flex;
+  justify-content: space-between;
+}
+.summaryAmountDue {
+  background-color: var(--dark-grey);
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+}
+.amountDueLabel {
+  color: var(--white);
+}
+.amountDueSum {
+  color: var(--white);
+}
+.itemName,
+.total {
+  color: var(--dark);
 }
