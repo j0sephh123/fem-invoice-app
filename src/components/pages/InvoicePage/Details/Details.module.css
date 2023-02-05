@@ -19,6 +19,7 @@
 .row1 .idAndDescription {
 }
 .row1 .idAndDescription .id {
+  font-family: "SemiBold";
 }
 .row1 .idAndDescription .description {
   padding-top: 8px;

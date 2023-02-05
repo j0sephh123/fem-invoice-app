@@ -13,7 +13,7 @@
   font-size: 12px;
 }
 .id {
-  font-family: "Bold";
+  font-family: "SemiBold";
 }
 .id span {
   font: inherit;
@@ -26,7 +26,8 @@
   color: var(--cove);
 }
 .total {
-  font-family: "Bold";  font-size: 16px;
+  font-family: "SemiBold";
+  font-size: 16px;
 }
 .tag {
   display: flex;

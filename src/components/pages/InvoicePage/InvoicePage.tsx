@@ -16,7 +16,7 @@ type Props = {
 };
 
 export default function InvoicePage({ invoice }: Props) {
-  const [isEditing, setIsEditing] = useState(true);
+  const [isEditing, setIsEditing] = useState(false);
 
   const handleEdit = () => {
     setIsEditing(true);
