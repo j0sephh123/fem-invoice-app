@@ -1,14 +1,5 @@
-import NotFoundIcon from "@/icons/NotFoundIcon/NotFoundIcon";
+import NotFound from "@/components/NotFound/NotFound";
 
 export default function FourOhFour() {
-  return (
-    <div className="NotFound">
-      <div className="NotFoundContent">
-        <NotFoundIcon />
-        <h1>There is nothing here</h1>
-        <p>Create an invoice by clicking the</p>
-        <p>New Invoice button and get started</p>
-      </div>
-    </div>
-  );
+  return <NotFound />;
 }

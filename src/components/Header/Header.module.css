@@ -4,13 +4,10 @@
   justify-content: space-between;
 }
 
-.left h1 {
-  font-family: "SemiBold";
+.left .title {
   padding-bottom: 8px;
 }
-.left span {
-  color: var(--grey);
-}
+
 .right {
   display: flex;
   align-items: center;

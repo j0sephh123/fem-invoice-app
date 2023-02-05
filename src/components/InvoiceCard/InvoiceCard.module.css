@@ -8,27 +8,13 @@
   padding: 24px 24px 24px 32px;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid transparent;
 }
-.item {
-  font-size: 12px;
+
+.InvoiceCard:hover{
+  border: 1px solid var(--purple);
 }
-.id {
-  font-family: "SemiBold";
-}
-.id span {
-  font: inherit;
-  color: var(--cove);
-}
-.paymentDue {
-  color: var(--cove);
-}
-.clientName {
-  color: var(--cove);
-}
-.total {
-  font-family: "SemiBold";
-  font-size: 16px;
-}
+
 .tag {
   display: flex;
   gap: 20px;

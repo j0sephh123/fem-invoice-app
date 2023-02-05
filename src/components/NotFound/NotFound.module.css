@@ -1,0 +1,22 @@
+.NotFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.NotFoundContent h1 {
+  padding-top: 64px;
+  padding-bottom: 24px;
+  font-size: 20px;
+  text-align: center;
+}
+.NotFoundContent p {
+  color: var(--grey);
+  text-align: center;
+  font-size: 12px;
+}
