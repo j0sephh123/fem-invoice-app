@@ -5,6 +5,7 @@ import classes from "./InvoicePage.module.css";
 import { Invoice } from "@/types";
 import { useState } from "react";
 import DialogDemo from "@/components/Dialog/Dialog";
+import * as Dialog from "@radix-ui/react-dialog";
 
 type Props = {
   invoice: Invoice;
@@ -13,13 +14,19 @@ type Props = {
 export default function InvoicePage({ invoice }: Props) {
   const [isEditing, setIsEditing] = useState(true);
 
+  const handleEdit = () => {
+    setIsEditing(true);
+  };
+
   return (
-    <div className={classes.InvoicePage}>
-      <GoBack />
-      <Controls />
-      <Details invoice={invoice} />
-      <div className={classes.overlay}>class</div>
-      <DialogDemo />
-    </div>
+    <Dialog.Root open={isEditing} onOpenChange={setIsEditing}>
+      <div className={classes.InvoicePage}>
+        <GoBack />
+        <Controls onEdit={handleEdit} />
+        <Details invoice={invoice} />
+        <div className={classes.overlay}>class</div>
+        <DialogDemo />
+      </div>
+    </Dialog.Root>
   );
 }

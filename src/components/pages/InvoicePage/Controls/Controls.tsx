@@ -2,7 +2,11 @@ import Button from "@/components/Button/Button";
 import Tag from "@/components/Tag/Tag";
 import classes from "./Controls.module.css";
 
-export default function Controls() {
+type Props = {
+  onEdit: () => void;
+};
+
+export default function Controls({ onEdit }: Props) {
   return (
     <div className={classes.Controls}>
       <div className={classes.left}>
@@ -10,7 +14,7 @@ export default function Controls() {
         <Tag status="pending" />
       </div>
       <div className={classes.right}>
-        <Button onClick={() => undefined} variant="secondary">
+        <Button onClick={onEdit} variant="secondary">
           Edit
         </Button>
         <Button onClick={() => undefined} variant="danger">
