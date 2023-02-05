@@ -6,24 +6,33 @@
   border-radius: 8px;
 }
 
+.label {
+  color: var(--cove);
+  font-size: 12px;
+}
+
 .row1 {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 24px;
 }
 .row1 .idAndDescription {
 }
 .row1 .idAndDescription .id {
 }
 .row1 .idAndDescription .description {
+  padding-top: 8px;
 }
 .row1 .senderAddress {
 }
 .row1 .senderAddress > div {
+  padding-top: 4px;
 }
 
 .row2 {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 8px;
 }
 .row2 .createdAt {
 }
@@ -32,11 +41,19 @@
 .row2 .clientEmail {
 }
 
+.row2 .label {
+  padding-bottom: 12px;
+}
+
 .row3 {
   display: flex;
   justify-content: space-between;
 }
-.row3 .paymentDue {
+.row3 .paymentDue .label {
+  padding-bottom: 12px;
+}.row3 .clientAddress  {
+  padding-right: 125px;
 }
-.row3 .clientAddress {
+.row3 .clientAddress .label {
+  padding-top: 4px;
 }
