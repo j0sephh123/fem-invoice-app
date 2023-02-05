@@ -3,12 +3,16 @@ import PlusIcon from "@/icons/PlusIcon/PlusIcon";
 import Button from "../Button/Button";
 import classes from "./Header.module.css";
 import TextNode from "@/components/TextNode/TextNode";
+import { useState } from "react";
+import FilterItems from "./FilterItems/FilterItems";
 
 type Props = {
   totalInvoices: number;
 };
 
 export default function Header({ totalInvoices }: Props) {
+  const [isFiltering, setIsFiltering] = useState(false);
+
   return (
     <div className={classes.Header}>
       <div className={classes.left}>
@@ -20,9 +24,14 @@ export default function Header({ totalInvoices }: Props) {
         </TextNode>
       </div>
       <div className={classes.right}>
-        <div className={classes.filter}>
+        <div onClick={() => setIsFiltering(true)} className={classes.filter}>
           <TextNode>Filter by status</TextNode>
           <ArrowIcon orientation="bottom" />
+          {isFiltering && (
+            <FilterItems onClose={() => setIsFiltering(false)}>
+              <div className={classes.filterItems}>filterItems</div>
+            </FilterItems>
+          )}
         </div>
         <div className={classes.action}>
           <Button onClick={() => {}} icon={<PlusIcon />}>
