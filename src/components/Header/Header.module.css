@@ -17,10 +17,11 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  cursor: pointer;
   position: relative;
 }
-
+.filter svg {
+  cursor: pointer;
+}
 .filterItems {
   padding: 24px;
   top: 24px;
@@ -28,4 +29,8 @@
   border-radius: 8px;
   position: absolute;
   background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
+

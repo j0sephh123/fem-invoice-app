@@ -4,3 +4,6 @@
 .ArrowIcon__bottom {
   transform: rotate(-90deg);
 }
+.ArrowIcon__top {
+  transform: rotate(90deg);
+}

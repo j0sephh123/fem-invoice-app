@@ -4,15 +4,20 @@ import Button from "../Button/Button";
 import classes from "./Header.module.css";
 import TextNode from "@/components/TextNode/TextNode";
 import { useState } from "react";
-import FilterItems from "./FilterItems/FilterItems";
+import Menu from "../Menu/Menu";
 import Checkbox from "../Checkbox/Checkbox";
+import { InvoiceStatus } from "@/types";
 
 type Props = {
   totalInvoices: number;
 };
+type Filters = [InvoiceStatus?, InvoiceStatus?, InvoiceStatus?];
+
+const filters: Filters = ["draft", "pending", "paid"];
 
 export default function Header({ totalInvoices }: Props) {
   const [isFiltering, setIsFiltering] = useState(false);
+  const [activeFilters, setActiveFilters] = useState<Filters>([]);
 
   return (
     <div className={classes.Header}>
@@ -27,15 +32,34 @@ export default function Header({ totalInvoices }: Props) {
       <div className={classes.right}>
         <div onClick={() => setIsFiltering(true)} className={classes.filter}>
           <TextNode>Filter by status</TextNode>
-          <ArrowIcon orientation="bottom" />
+          <ArrowIcon orientation={isFiltering ? "top" : "bottom"} />
           {isFiltering && (
-            <FilterItems onClose={() => setIsFiltering(false)}>
+            <Menu onClose={() => setIsFiltering(false)}>
               <div className={classes.filterItems}>
-                <Checkbox>Draft</Checkbox>
-                <Checkbox isChecked>Pending</Checkbox>
-                <Checkbox>Paid</Checkbox>
+                {filters.map((filter) => (
+                  <Checkbox
+                    onClick={() =>
+                      setActiveFilters((prevFilters) => {
+                        const foundIndex = prevFilters.findIndex(
+                          (prevFilter) => prevFilter === filter
+                        );
+
+                        if (foundIndex === -1) {
+                          return [...prevFilters, filter] as any;
+                        } else {
+                          return [
+                            ...prevFilters.slice(0, foundIndex),
+                            ...prevFilters.slice(foundIndex + 1),
+                          ] as Filters;
+                        }
+                      })
+                    }
+                    type={filter as InvoiceStatus}
+                    isChecked={activeFilters.includes(filter)}
+                  />
+                ))}
               </div>
-            </FilterItems>
+            </Menu>
           )}
         </div>
         <div className={classes.action}>

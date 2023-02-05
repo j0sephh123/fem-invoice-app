@@ -1,11 +1,11 @@
-import ConditionalWrapper from '@/components/ConditionalWrapper/ConditionalWrapper';
-import { PropsWithChildren, useState } from 'react'
-import ClickAwayListener from 'react-click-away-listener';
+import ConditionalWrapper from "@/components/ConditionalWrapper/ConditionalWrapper";
+import { PropsWithChildren, useState } from "react";
+import ClickAwayListener from "react-click-away-listener";
 
-export default function FilterItems ({
+export default function Menu({
   children,
   onClose,
-}: { onClose: any } & PropsWithChildren)  {
+}: { onClose: any } & PropsWithChildren) {
   const [isActive, setIsActive] = useState(true);
 
   const handleClickAway = () => {
@@ -25,4 +25,4 @@ export default function FilterItems ({
       {children}
     </ConditionalWrapper>
   );
-};
+}
