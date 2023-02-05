@@ -12,7 +12,7 @@ type Props = {
 };
 
 export default function InvoicePage({ invoice }: Props) {
-  const [isEditing, setIsEditing] = useState(true);
+  const [isEditing, setIsEditing] = useState(false);
 
   const handleEdit = () => {
     setIsEditing(true);
@@ -24,7 +24,6 @@ export default function InvoicePage({ invoice }: Props) {
         <GoBack />
         <Controls onEdit={handleEdit} />
         <Details invoice={invoice} />
-        <div className={classes.overlay}>class</div>
         <DialogDemo />
       </div>
     </Dialog.Root>

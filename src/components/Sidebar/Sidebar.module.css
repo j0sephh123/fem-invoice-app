@@ -1,6 +1,6 @@
 .Sidebar {
   background-color: var(--dark-grey);
-  height: 100vh;
+  min-height: 100vh;
   width: 100px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 24px;
-  position:fixed;
+  position: fixed;
 }
 
 .logo {
@@ -44,14 +44,14 @@
 
 .footer {
   width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
 .separator {
-  background-color:var(--cove);
+  background-color: var(--cove);
   height: 1px;
   width: 100%;
 }

@@ -1,6 +1,6 @@
 .Details {
   margin-top: 24px;
-  padding: 48px;
+  padding: 48px 48px 0 48px;
   box-shadow: var(--boxShadow-card);
   background-color: var(--white);
   border-radius: 8px;
