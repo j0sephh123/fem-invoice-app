@@ -1,14 +1,17 @@
 import InvoicePage from "@/components/pages/InvoicePage/InvoicePage";
 import { Invoice } from "@/types";
-import { getData } from "@/utils/api";
+import { store } from "@/utils/store";
 import { useRouter } from "next/router";
+import { useSnapshot } from "valtio";
 
 export default function InvoicePageIndex() {
   const {
     query: { id },
   } = useRouter();
 
-  const invoice = getData().find((item) => item.id === id) as Invoice;
+  const snap = useSnapshot(store);
+
+  const invoice = snap.invoices.find((item) => item.id === id) as Invoice;
 
   if (!invoice) {
     return <div>Loading..</div>;

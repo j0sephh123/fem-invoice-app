@@ -12,16 +12,16 @@ type Item = {
   total: number;
 };
 export type Invoice = {
-  id: string;
-  createdAt: string;
-  paymentDue: string;
-  description: string;
-  paymentTerms: number;
-  clientName: string;
-  clientEmail: string;
-  status: InvoiceStatus;
-  senderAddress: Address;
-  clientAddress: Address;
-  items: Item[];
-  total: number;
+  id: readonly string;
+  createdAt: readonly string;
+  paymentDue: readonly string;
+  description: readonly string;
+  paymentTerms: readonly number;
+  clientName: readonly string;
+  clientEmail: readonly string;
+  status: readonly InvoiceStatus;
+  senderAddress: readonly Address;
+  clientAddress: readonly Address;
+  items: readonly Item[];
+  total: readonly number;
 };
