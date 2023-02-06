@@ -1,24 +1,17 @@
 import clsx from "clsx";
 import { PropsWithChildren } from "react";
-import classes from "./TextNode.module.css";
 
 type Props = {
-  variant?: "title" | "subtitle" | "boldedSubtitle" | "bold";
-  className?: string;
+  color?: "dark" | "grey";
+  size?: "xl" | "lg" | "md" | "sm";
+  fontFamily?: "regular" | "bold";
 } & PropsWithChildren;
 
-export default function TextNode({ children, variant, className }: Props) {
-  if (variant === "title") {
-    return <h1 className={clsx(classes[variant], className)}>{children}</h1>;
-  }
-
-  if (
-    variant === "subtitle" ||
-    variant === "boldedSubtitle" ||
-    variant === "bold"
-  ) {
-    return <p className={clsx(classes[variant], className)}>{children}</p>;
-  }
-
-  return <p className={clsx(classes.normal, className)}>{children}</p>;
+export default function TextNode({
+  children,
+  color = "dark",
+  size = "md",
+  fontFamily = "regular",
+}: Props) {
+  return <div className={clsx(color, size, fontFamily)}>{children}</div>;
 }

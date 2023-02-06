@@ -43,3 +43,28 @@ a {
 .flex {
   display: flex;
 }
+
+.regular {
+  font-family: "Regular";
+}
+.bold {
+  font-family: "SemiBold";
+}
+.dark {
+  color: var(--dark);
+}
+.grey {
+  color: var(--grey);
+}
+.xl {
+  font-size: 32px;
+}
+.lg {
+  font-size: 23px;
+}
+.md {
+  font-size: 16px;
+}
+.sm {
+  font-size: 12px;
+}

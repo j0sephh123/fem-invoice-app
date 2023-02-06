@@ -22,10 +22,8 @@ export default function Header({ totalInvoices }: Props) {
   return (
     <div className={classes.Header}>
       <div className={classes.left}>
-        <TextNode className={classes.title} variant="title">
-          Invoices
-        </TextNode>
-        <TextNode variant="subtitle">
+        <TextNode size="xl">Invoices</TextNode>
+        <TextNode size="sm" color="grey">
           There are {totalInvoices} total invoices
         </TextNode>
       </div>

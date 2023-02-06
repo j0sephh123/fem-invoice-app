@@ -18,12 +18,12 @@ export default function InvoiceCard({
     <Link href={`invoices/${id}`}>
       <div className={classes.InvoiceCard}>
         <Flex>
-          <TextNode variant="boldedSubtitle">#</TextNode>
+          <TextNode color='grey' size='sm' fontFamily='bold'>#</TextNode>
           <TextNode>{id}</TextNode>
         </Flex>
-        <TextNode variant="subtitle">Due {paymentDue}</TextNode>
-        <TextNode variant="subtitle">{clientName}</TextNode>
-        <TextNode variant="bold">£{total}</TextNode>
+        <TextNode color='grey' size='sm'>Due {paymentDue}</TextNode>
+        <TextNode color='grey' size='sm'>{clientName}</TextNode>
+        <TextNode fontFamily='bold'>£{total}</TextNode>
         <div className={clsx(classes.item, classes.tag)}>
           <Tag status={status} />
           <ArrowIcon orientation="right" />
