@@ -8,60 +8,35 @@ https://www.radix-ui.com/docs/primitives/components/dialog
 
 ## https://github.com/wojtekmaj/react-calendar
 
-**className** Class name(s) that will be added along with "react-calendar" to the main React-Calendar <div> element.
-**tileClassName** Class name(s) that will be applied to a given calendar item (day on month view, month on year view and so on).
+# Folder structure ideas
+1. abstractions?
+Import 3rd party libraries and create an abstraction around them
+For example Calendar lib.
+An exception would be `react-click-away-listener`, since its API seems straightforward enough and abstracting it seems pointless.
 
-demo notes
+2. primitives/custom - these are the custom ones that are created from scratch - obviously simple ones
 
-```tsx
-import { useState } from "react";
-import { ActiveDropdownItem } from "@/components/Dropdown/types";
-import Sidebar from "@/components/Sidebar/Sidebar";
-import Header from "@/components/Header/Header";
-const dropdownItems = [
-  { value: "1", label: "Net 1 days" },
-  { value: "7", label: "Net 7 days" },
-  { value: "14", label: "Net 14 days" },
-  { value: "30", label: "Net 30 days" },
-];
+3. icons - still think that no matter how much logic is used, icons should be separate
 
-const [date, setDate] = useState(new Date());
-const [activeDropdownItem, setActiveDropdownItem] =
-  useState<ActiveDropdownItem>(null);
-<div>
-  <div className="app">
-    <CalendarControl setDate={setDate} date={date} />
-    <Dropdown
-      items={dropdownItems}
-      activeItem={activeDropdownItem}
-      setActiveItem={setActiveDropdownItem}
-    />
-    <br />
-  </div>
-  <div style={{ width: "300px", marginLeft: "20px" }}>
-    <TextField />
-  </div>
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      gap: "12px",
-    }}
-  >
-    <Button onClick={() => {}} icon={<PlusIcon />}>
-      New Invoice
-    </Button>
-    <Button onClick={() => {}}>Mark as paid</Button>
-    <Button variant="secondary" onClick={() => {}}>
-      Edit
-    </Button>
-    <Button variant="danger" onClick={() => {}}>
-      Delete
-    </Button>
-    <Button variant="dark" onClick={() => {}}>
-      Save as draft
-    </Button>
-  </div>
-</div>;
-```
+4. pages - definitely separate
+
+5. utility ones - such as Conditional wrapper and Flex?
+
+6. form - not sure if they should be separate from the other types?
+Do we actually need to separate form?
+
+7. sections - Header, GoBack
+
+8. repeatables - InvoiceCard
+
+9. composables - still our own, but created using other components from our own? Not sure if it makes sense, but still I really want to try it. 
+
+10. dialogs/modals - should they be in utility ones (5?)
+
+
+7. **GoBack**
+7. **Header**
+7. **Invoices**
+7. **Sidebar**
+8. **InvoiceCard**
+10. **EditInvoiceDialog**

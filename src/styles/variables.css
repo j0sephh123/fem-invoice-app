@@ -6,7 +6,7 @@
   --grey: #888eb0;
   --dark-grey: #373b53;
   --dark: #0c0e16;
-  --grey-background: #F8F8FB;
+  --grey-background: #f8f8fb;
   --white: #fff;
   --light: #dfe3fa;
   --lighter: #f9fafe;
@@ -15,4 +15,41 @@
   --red-lighter: #ff9797;
   --green: #33d69f;
   --orange: #ff8f00;
+}
+
+/* fonts */
+.regular {
+  font-family: "Regular";
+}
+.bold {
+  font-family: "SemiBold";
+}
+
+/* colors */
+.dark {
+  color: var(--dark);
+}
+.grey {
+  color: var(--grey);
+}
+.purple {
+  color: var(--purple);
+}
+.cove {
+  color: var(--cove);
+}
+
+
+/* font-sizes */
+.xl {
+  font-size: 32px;
+}
+.lg {
+  font-size: 24px;
+}
+.md {
+  font-size: 16px;
+}
+.sm {
+  font-size: 12px;
 }

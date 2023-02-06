@@ -1,5 +1,5 @@
-import Button from "@/components/Button/Button";
-import Tag from "@/components/Tag/Tag";
+import Button from "@/components/primitives/Button/Button";
+import Tag from "@/components/primitives/Tag/Tag";
 import classes from "./Controls.module.css";
 
 type Props = {

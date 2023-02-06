@@ -1,12 +1,12 @@
-import GoBack from "@/components/GoBack/GoBack";
+import GoBack from "@/components/sections/GoBack/GoBack";
 import Controls from "./Controls/Controls";
 import Details from "./Details/Details";
 import classes from "./InvoicePage.module.css";
 import { Invoice } from "@/types";
 import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import EditInvoiceDialog from "@/components/EditInvoiceDialog/EditInvoiceDialog";
-import EditInvoice from "@/components/EditInvoice/EditInvoice";
+import EditInvoiceDialog from "@/components/dialogs/EditInvoiceDialog/EditInvoiceDialog";
+import EditInvoice from "@/components/sections/EditInvoice/EditInvoice";
 
 type Props = {
   invoice: Invoice;

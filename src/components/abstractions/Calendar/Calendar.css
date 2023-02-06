@@ -1,0 +1,51 @@
+.react-calendar {
+  position: absolute;
+  top: 96px;
+  width: 240px;
+  background: var(--white);
+  box-shadow: var(--boxShadow-field);
+  border-radius: 8px;
+  padding: 24px;
+}
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.react-calendar__navigation__label {
+  border: none;
+  background-color: transparent;
+  color: var(--dark);
+}
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: var(--dark);
+  opacity: 0.08;
+  border: none;
+}
+.react-calendar__tile {
+  border: none;
+  background-color: transparent;
+}
+.react-calendar__month-view__weekdays {
+  display: none !important; /* Can't find in their docs how to hide */
+}
+
+.react-calendar__tile {
+  cursor: pointer;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.react-calendar__tile--active {
+  font-weight: 600;
+  color: var(--purple);
+}
+.react-calendar__month-view__days {
+  padding-top: 32px;
+  padding-bottom: 8px;
+}

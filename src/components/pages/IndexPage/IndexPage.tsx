@@ -1,16 +1,15 @@
 import classes from "./IndexPage.module.css";
-import Header from "@/components/Header/Header";
-import InvoiceCard from "@/components/InvoiceCard/InvoiceCard";
-import NotFound from "@/components/NotFound/NotFound";
+import Header from "@/components/sections/Header/Header";
+import NotFound from "@/components/sections/NotFound/NotFound";
 import { useSnapshot } from "valtio";
 import { store } from "@/utils/store";
-
+import InvoiceCard from "@/components/repeatables/InvoiceCard/InvoiceCard";
 
 type Props = {};
 
 export default function IndexPage({}: Props) {
   // const data = getData();
-  const snap =  useSnapshot(store)
+  const snap = useSnapshot(store);
 
   return (
     <div className={classes.IndexPage}>
