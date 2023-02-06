@@ -9,7 +9,7 @@ type Props = {
 
 export default function TextField({ value, label }: Props) {
   return (
-    <div>
+    <div className={classes.TextField}>
       {label}
       <input
         value={value}

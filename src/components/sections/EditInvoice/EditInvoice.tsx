@@ -2,6 +2,7 @@ import CalendarControl from "@/components/form/CalendarControl/CalendarControl";
 import TextField from "@/components/form/TextField/TextField";
 import Button from "@/components/primitives/Button/Button";
 import TextNode from "@/components/primitives/TextNode/TextNode";
+import Flex from "@/components/utility/Flex/Flex";
 import { Invoice } from "@/types";
 import classes from "./EditInvoice.module.css";
 import EditInvoiceTitle from "./EditInvoiceTitle/EditInvoiceTitle";
@@ -24,26 +25,40 @@ export default function EditInvoice({ invoice }: Props) {
         >
           Bill From
         </TextNode>
-        <div>
+        <TextField
+          label={
+            <TextNode size="sm" color="cove">
+              Street Address
+            </TextNode>
+          }
+          value={invoice.senderAddress.street}
+        />
+        <Flex gap={24}>
           <TextField
-            label="Street Address"
-            value={invoice.senderAddress.street}
+            label={
+              <TextNode size="sm" color="cove">
+                City
+              </TextNode>
+            }
+            value={invoice.senderAddress.city}
           />
-        </div>
-        <div className="flex">
-          <div>
-            <TextField label="City" value={invoice.senderAddress.city} />
-          </div>
-          <div>
-            <TextField
-              label="Post Code"
-              value={invoice.senderAddress.postCode}
-            />
-          </div>
-          <div>
-            <TextField label="Country" value={invoice.senderAddress.country} />
-          </div>
-        </div>
+          <TextField
+            label={
+              <TextNode size="sm" color="cove">
+                Post Code
+              </TextNode>
+            }
+            value={invoice.senderAddress.postCode}
+          />
+          <TextField
+            label={
+              <TextNode size="sm" color="cove">
+                Country
+              </TextNode>
+            }
+            value={invoice.senderAddress.country}
+          />
+        </Flex>
       </div>
       <div>
         <TextNode
