@@ -1,3 +1,5 @@
+import FormField from "@/components/composables/FormField/FormField";
+import FormLabel from "@/components/composables/FormLabel/FormLabel";
 import CalendarControl from "@/components/form/CalendarControl/CalendarControl";
 import TextField from "@/components/form/TextField/TextField";
 import Button from "@/components/primitives/Button/Button";
@@ -16,80 +18,42 @@ export default function EditInvoice({ invoice }: Props) {
     <div className={classes.EditInvoice}>
       <EditInvoiceTitle>{invoice.id}</EditInvoiceTitle>
 
-      <div>
-        <TextNode
-          className={classes.bill}
-          size="sm"
-          fontFamily="bold"
-          color="purple"
-        >
-          Bill From
-        </TextNode>
-        <TextField
-          label={
-            <TextNode size="sm" color="cove">
-              Street Address
-            </TextNode>
-          }
-          value={invoice.senderAddress.street}
+      <FormLabel>Bill From</FormLabel>
+      <FormField label="Street Address" value={invoice.senderAddress.street} />
+      <Flex gap={24}>
+        <FormField label="City" value={invoice.senderAddress.city} />
+        <FormField label="Post Code" value={invoice.senderAddress.postCode} />
+        <FormField label="Country" value={invoice.senderAddress.country} />
+      </Flex>
+
+      <FormLabel>Bill To</FormLabel>
+      <FormField label="Client's Name" value={invoice.clientName} />
+      <FormField label="Client's Email" value={invoice.clientEmail} />
+      <FormField label="Street Address" value={invoice.clientAddress.street} />
+
+      <Flex gap={24}>
+        <FormField label="City" value={invoice.clientAddress.city} />
+        <FormField label="Post Code" value={invoice.clientAddress.postCode} />
+        <FormField label="Country" value={invoice.clientAddress.country} />
+      </Flex>
+
+      <Flex className={classes.dateAndTerms} gap={24}>
+        <CalendarControl
+          label="Invoice Date"
+          date={new Date()}
+          setDate={() => {}}
         />
-        <Flex gap={24}>
-          <TextField
-            label={
-              <TextNode size="sm" color="cove">
-                City
-              </TextNode>
-            }
-            value={invoice.senderAddress.city}
-          />
-          <TextField
-            label={
-              <TextNode size="sm" color="cove">
-                Post Code
-              </TextNode>
-            }
-            value={invoice.senderAddress.postCode}
-          />
-          <TextField
-            label={
-              <TextNode size="sm" color="cove">
-                Country
-              </TextNode>
-            }
-            value={invoice.senderAddress.country}
-          />
-        </Flex>
-      </div>
+        <CalendarControl
+          label="Payment Terms"
+          date={new Date()}
+          setDate={() => {}}
+        />
+      </Flex>
+
+      <FormField label="Project Description" value={invoice.description} />
+
       <div>
-        <TextNode
-          className={classes.bill}
-          size="sm"
-          fontFamily="bold"
-          color="purple"
-        >
-          Bill To
-        </TextNode>
-        <TextField label="Client’s Name" value={invoice.clientName} />
-        <TextField label="Client’s Name" value={invoice.clientEmail} />
-        <TextField label="Client’s Name" value={invoice.clientAddress.street} />
-        <div className="flex">
-          <TextField label="Client’s Name" value={invoice.clientAddress.city} />
-          <TextField
-            label="Client’s Name"
-            value={invoice.clientAddress.postCode}
-          />
-          <TextField
-            label="Client’s Name"
-            value={invoice.clientAddress.country}
-          />
-        </div>
-      </div>
-      <div className="flex">
-        <CalendarControl date={new Date()} setDate={() => {}} />
-        <CalendarControl date={new Date()} setDate={() => {}} />
-      </div>
-      <div>
-        <h1>Item List</h1>
+        <TextNode>Item List</TextNode>
         {invoice.items.map((item) => (
           <div>
             <div>{item.name}</div>

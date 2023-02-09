@@ -17,7 +17,7 @@ export default function Field({
   children,
 }: Props) {
   return (
-    <div>
+    <>
       {label}
       <div onClick={onClickInside} className={classes.fieldWrapper}>
         <div className={clsx("field", isActive && classes.active)}>
@@ -25,6 +25,6 @@ export default function Field({
         </div>
         <div className={classes.icon}>{icon}</div>
       </div>
-    </div>
+    </>
   );
 }

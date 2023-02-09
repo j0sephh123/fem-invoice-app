@@ -1,3 +1,4 @@
+import FormLabel from "@/components/composables/FormLabel/FormLabel";
 import CalendarIcon from "@/components/icons/CalendarIcon";
 import TextNode from "@/components/primitives/TextNode/TextNode";
 import ConditionalWrapper from "@/components/utility/ConditionalWrapper/ConditionalWrapper";
@@ -12,9 +13,10 @@ import classes from "./CalendarControl.module.css";
 type Props = {
   date: Date;
   setDate: Dispatch<SetStateAction<Date>>;
+  label: string;
 };
 
-export default function CalendarControl({ date, setDate }: Props) {
+export default function CalendarControl({ date, setDate, label }: Props) {
   const [isCalendarActive, setIsCalendarActive] = useState(false);
 
   return (
@@ -30,8 +32,12 @@ export default function CalendarControl({ date, setDate }: Props) {
         <Field
           isActive={isCalendarActive}
           label={
-            <TextNode onClick={() => setIsCalendarActive(false)}>
-              Issue Date
+            <TextNode
+              onClick={() => setIsCalendarActive(false)}
+              size="sm"
+              color="cove"
+            >
+              {label}
             </TextNode>
           }
           onClickInside={() => setIsCalendarActive(!isCalendarActive)}
